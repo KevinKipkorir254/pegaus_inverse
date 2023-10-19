@@ -4,9 +4,8 @@ clc
 L1 = Link('d', 0.1, 'a', 0, 'alpha', -pi/2);
 L2 = Link('d', 0, 'a', 0.1, 'alpha', 0);
 L3 = Link('d', 0, 'a', 0.1, 'alpha', 0);
-L4 = Link('d', 0, 'a', 0, 'alpha', 0);
-L5 = Link('d', 0, 'a', 0.1, 'alpha', 0);
-
+L4 = Link('d', 0, 'a', 0, 'alpha', -pi/2);
+L5 = Link('d', 0.1, 'a', 0, 'alpha', 0);
 dh_params = [L1 L2 L3 L4 L5];
 % Create a robot model using the DH parameters
 robot = SerialLink(dh_params, 'name', 'PEGASUS');
@@ -34,7 +33,7 @@ link_4 = 100;
 link_5 = 100;
 
 z=0;
-pitch = 0;
+pitch = -0.5;
 yaw = 1.57;
 
 counter = 1;
@@ -80,7 +79,7 @@ while(counter < 362)
 	theta_1(counter) = theta_1_;
 	theta_2(counter) = theta_2_;
 	theta_3(counter) = theta_3_;
-	theta_4(counter) = theta_4_ + 1.57;
+	theta_4(counter) = theta_4_;
 	theta_5(counter) = theta_5_;
     fprintf("%f, %f, %f, %f, %f, %f, %f, %f\r\n", xx(counter), yy(counter), z, theta_1_, theta_2_, theta_3_, theta_4_ + 1.57, theta_5_);
     counter = counter + 1;
@@ -114,4 +113,15 @@ xlabel('X');
 ylabel('Y');
 title('6-Link Robot Arm Drawing a Circle');
 axis equal
+
+
+counter_1 = 1;
+figure;
+while(counter_1<362)
+
+
+robot.plot([theta_1(counter_1), theta_2(counter_1), theta_3(counter_1), theta_4(counter_1), theta_5(counter_1)])
+counter_1 = counter_1 + 1;
+end
+
 
