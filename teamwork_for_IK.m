@@ -27,7 +27,7 @@ axis equal
 hold on;
 
 %the Ik is as follows
-link_1 = 41;
+link_1 = 40;
 link_2 = 150;
 link_3 = 120;
 link_4 = 100;
