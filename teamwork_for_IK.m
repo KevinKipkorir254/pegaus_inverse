@@ -17,6 +17,7 @@ r = 80;
 phi = 0:1:360;
 xx = r+20 * cosd(phi);
 yy = r * sind(phi);
+zz = zeros(1, 361);
 
 figure;
 plot(xx, yy, 'b');
@@ -115,11 +116,21 @@ title('6-Link Robot Arm Drawing a Circle');
 axis equal
 hold off;
 
+fprintf('Length of xx: %d\n', length(xx));
+fprintf('Length of yy: %d\n', length(yy));
+fprintf('Length of zz: %d\n', length(zz));
 
-figure;
+
+figure(5);
+axis([-0.5 0.5 -0.5 0.5 -0.2 1]);
+hold on
+xx = xx/1000;
+yy = yy/1000;
+zz = zz/1000;
+
+plot3(xx, yy, zz,'r')
+
 counter_1 = 1;
-robot.plot([theta_1(counter_1), theta_2(counter_1), theta_3(counter_1), theta_4(counter_1), theta_5(counter_1)])
-
 
 fprintf("animation\r\n");
 while(counter_1<362)
