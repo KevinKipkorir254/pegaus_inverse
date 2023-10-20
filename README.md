@@ -6,3 +6,10 @@ The circle line
 The line drawn robot
 
 ![robot_line](https://github.com/KevinKipkorir254/pegaus_inverse/assets/96063788/f4948bc5-71ff-4740-b4a0-cd5862b4b921)
+
+Here is a video plotting the circle
+
+
+
+https://github.com/KevinKipkorir254/pegaus_inverse/assets/96063788/8f69a977-29ba-4cea-8555-1303599fc717
+
