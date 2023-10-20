@@ -1,8 +1,17 @@
 # pegaus_inverse
 
-The circle line
-![drawn_line](https://github.com/KevinKipkorir254/pegaus_inverse/assets/96063788/73eec43f-a95c-4b51-a241-33796f5dba47)
+drawn spiral equation
 
-The line drawn robot
+![Screenshot (2)](https://github.com/KevinKipkorir254/pegaus_inverse/assets/96063788/9c6a5b72-84ef-4bce-854e-f359f9bf5589)
 
-![robot_line](https://github.com/KevinKipkorir254/pegaus_inverse/assets/96063788/f4948bc5-71ff-4740-b4a0-cd5862b4b921)
+Traced by running the IK then through, Peter Corkes FK.
+
+
+![Screenshot (1)](https://github.com/KevinKipkorir254/pegaus_inverse/assets/96063788/a824fc47-ee33-4b91-b447-f089852c475c)
+
+
+Video of the tracing going on
+
+
+https://github.com/KevinKipkorir254/pegaus_inverse/assets/96063788/0ca4cc66-87b4-495b-9824-8d45a1581771
+
