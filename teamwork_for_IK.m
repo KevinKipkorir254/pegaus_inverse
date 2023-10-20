@@ -12,20 +12,32 @@ robot = SerialLink(dh_params, 'name', 'PEGASUS');
 
 
 
-r = 80;
+%r = 80;
 % Generate points for the circle
-phi = 0:1:360;
-xx = r+20 * cosd(phi);
-yy = r * sind(phi);
-zz = zeros(1, 361);
+%phi = 0:1:360;
+%xx = r+20 * cosd(phi);
+%yy = r * sind(phi);
+%zz = zeros(1, 361);
 
-figure;
-plot(xx, yy, 'b');
+a = 0.1;
+r = 40;
+
+t = 0:1:1000;
+
+xx = r * cosd(t) + 80;
+yy = r * sind(t);
+zz = a*t;
+
+
+
+
+figure(1);
+plot3(xx, yy, zz,'b')
 xlabel('X');
 ylabel('Y');
 title('6-Link Robot Arm Drawing a Circle');
 axis equal
-hold on;
+hold off;
 
 %the Ik is as follows
 link_1 = 40;
@@ -39,14 +51,14 @@ pitch = 0.00001;
 yaw = 1.57;
 
 counter = 1;
-theta_1 = 0:1:360;
-theta_2 = 0:1:360;
-theta_3 = 0:1:360;
-theta_4 = 0:1:360;
-theta_5 = 0:1:360;
+theta_1 = 0:1:1000;
+theta_2 = 0:1:1000;
+theta_3 = 0:1:1000;
+theta_4 = 0:1:1000;
+theta_5 = 0:1:1000;
 
 
-while(counter < 362)
+while(counter < 1001)
 
 
 	 theta_1_ = atan(yy(counter) / xx(counter));
@@ -54,7 +66,7 @@ while(counter < 362)
 	 s_1 = sin(theta_1_ );
 
 	%intermediate break
-	 b_2 = link_1 - (link_5 * cos(pitch)) - z;
+	 b_2 = link_1 - (link_5 * cos(pitch)) - zz(counter);
 	 b_1 = c_1 * xx(counter) + s_1 * yy(counter) + link_5 * sin(pitch);
 
 	%claculations for theta 3
@@ -90,14 +102,14 @@ while(counter < 362)
 end
 
 counter_1 = 1;
-x_end = 0:1:360;
-y_end = 0:1:360;
-z_end = 0:1:360;
+x_end = 0:1:1000;
+y_end = 0:1:1000;
+z_end = 0:1:1000;
 
 
 fprintf("End effector positions\r\n");
 
-while(counter_1<362)
+while(counter_1<1001)
 
 homogeneous = robot.fkine([ theta_1(counter_1), theta_2(counter_1), theta_3(counter_1), theta_4(counter_1), 0]);
 x_end(counter_1) = homogeneous.t(1,1)*1000;
@@ -108,8 +120,8 @@ counter_1 = counter_1 + 1;
 end
 
 
-
-plot(x_end, y_end, 'r');
+figure(2)
+plot3(xx, yy, zz,'r')
 xlabel('X');
 ylabel('Y');
 title('6-Link Robot Arm Drawing a Circle');
@@ -133,7 +145,7 @@ plot3(xx, yy, zz,'r')
 counter_1 = 1;
 
 fprintf("animation\r\n");
-while(counter_1<362)
+while(counter_1<1001)
 
 
 robot.plot([theta_1(counter_1), theta_2(counter_1), theta_3(counter_1), theta_4(counter_1), theta_5(counter_1)])
