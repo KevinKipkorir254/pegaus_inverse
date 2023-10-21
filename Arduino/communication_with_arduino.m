@@ -24,5 +24,6 @@ arduinoObj = serialport("COM4",9600)
 
 while(1)
 write(arduinoObj,jsonString,"int8")
+%write(arduinoObj,"\n","int8")
 pause(2);
 end
