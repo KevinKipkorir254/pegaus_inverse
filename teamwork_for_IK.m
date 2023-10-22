@@ -155,15 +155,16 @@ while(counter_1<1001)
 robot.plot([theta_1(counter_1), theta_2(counter_1), theta_3(counter_1), theta_4(counter_1), theta_5(counter_1)])
 
 % Create a struct for joint data
-jointData = struct( 'joint_1', theta_1(counter_1), 'joint_2', theta_2(counter_1), 'joint_3', theta_3(counter_1),'joint_4', theta_4(counter_1));
+jointData = struct( 'joint_1', rad2deg(theta_1(counter_1)), 'joint_2', rad2deg(theta_2(counter_1)), 'joint_3', rad2deg(theta_3(counter_1)),'joint_4', rad2deg(theta_4(counter_1)));
 
 % Convert the struct to a JSON string
 jsonString = jsonencode(jointData)
 
 
-write(arduinoObj,jsonString,"int8")
+write(arduinoObj,jsonString,"int8");
 
 fprintf("%f\r\n", counter_1);
+pause(1);
 counter_1 = counter_1 + 1;
 end
 

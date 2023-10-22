@@ -5,6 +5,12 @@
 //declaring space requirements
 StaticJsonDocument<200> doc;
 
+//mapping files
+int toLow = 0;
+int toHigh = 180;
+int fromLow = -90;
+int fromHigh = 90;
+
 
 int base = 11;
 int shoulder = 12;
@@ -51,18 +57,22 @@ void loop() {
         Serial.print("Received JSON data - joint_1: ");
         Serial.println(joint_1);
         Serial.print("joint_2: ");
-        Serial.println(joint_2);
+        Serial.println(-1*joint_2);
         Serial.print("joint_3: ");
         Serial.println(joint_3);
         Serial.print("joint_4: ");
-        Serial.println(joint_4);
+
+        int joint_map_4 = map(joint_4, fromLow, fromHigh, toLow, toHigh);
+        
+        Serial.println(-1*joint_4);
 
 
         
-       base_servo.write(joint_1);
-       shoulder_servo.write(joint_2);
+       base_servo.write(joint_1 + 90);
+       shoulder_servo.write(-1*joint_2);
        elbow_servo.write(joint_3);
-       wrist_servo.write(joint_4);
+       wrist_servo.write(-1*joint_4);
+       
       }
 
       
