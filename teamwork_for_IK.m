@@ -12,6 +12,10 @@ robot = SerialLink(dh_params, 'name', 'PEGASUS');
 
 
 
+serialportlist("available")
+arduinoObj = serialport("COM4",9600)
+
+
 %r = 80;
 % Generate points for the circle
 %phi = 0:1:360;
@@ -149,6 +153,16 @@ while(counter_1<1001)
 
 
 robot.plot([theta_1(counter_1), theta_2(counter_1), theta_3(counter_1), theta_4(counter_1), theta_5(counter_1)])
+
+% Create a struct for joint data
+jointData = struct( 'joint_1', theta_1(counter_1), 'joint_2', theta_2(counter_1), 'joint_3', theta_3(counter_1),'joint_4', theta_4(counter_1));
+
+% Convert the struct to a JSON string
+jsonString = jsonencode(jointData)
+
+
+write(arduinoObj,jsonString,"int8")
+
 fprintf("%f\r\n", counter_1);
 counter_1 = counter_1 + 1;
 end
