@@ -1,25 +1,2 @@
-﻿  interpolation.cpp
-C:\Users\HP\Documents\MATLAB\pegaus_inverse\Pegasus_robotic_arm\Pegasus_robotic_arm\interpolation.cpp(128,29): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\HP\Documents\MATLAB\pegaus_inverse\Pegasus_robotic_arm\Pegasus_robotic_arm\interpolation.cpp(129,29): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\HP\Documents\MATLAB\pegaus_inverse\Pegasus_robotic_arm\Pegasus_robotic_arm\interpolation.cpp(130,29): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\HP\Documents\MATLAB\pegaus_inverse\Pegasus_robotic_arm\Pegasus_robotic_arm\interpolation.cpp(131,110): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\HP\Documents\MATLAB\pegaus_inverse\Pegasus_robotic_arm\Pegasus_robotic_arm\interpolation.cpp(132,34): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\HP\Documents\MATLAB\pegaus_inverse\Pegasus_robotic_arm\Pegasus_robotic_arm\interpolation.cpp(133,34): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\HP\Documents\MATLAB\pegaus_inverse\Pegasus_robotic_arm\Pegasus_robotic_arm\interpolation.cpp(134,34): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\HP\Documents\MATLAB\pegaus_inverse\Pegasus_robotic_arm\Pegasus_robotic_arm\interpolation.cpp(156,94): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\HP\Documents\MATLAB\pegaus_inverse\Pegasus_robotic_arm\Pegasus_robotic_arm\interpolation.cpp(156,122): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\HP\Documents\MATLAB\pegaus_inverse\Pegasus_robotic_arm\Pegasus_robotic_arm\interpolation.cpp(156,150): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\HP\Documents\MATLAB\pegaus_inverse\Pegasus_robotic_arm\Pegasus_robotic_arm\interpolation.cpp(156,178): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\HP\Documents\MATLAB\pegaus_inverse\Pegasus_robotic_arm\Pegasus_robotic_arm\interpolation.cpp(174,92): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\HP\Documents\MATLAB\pegaus_inverse\Pegasus_robotic_arm\Pegasus_robotic_arm\interpolation.cpp(174,124): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\HP\Documents\MATLAB\pegaus_inverse\Pegasus_robotic_arm\Pegasus_robotic_arm\interpolation.cpp(174,156): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\HP\Documents\MATLAB\pegaus_inverse\Pegasus_robotic_arm\Pegasus_robotic_arm\interpolation.cpp(194,82): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\HP\Documents\MATLAB\pegaus_inverse\Pegasus_robotic_arm\Pegasus_robotic_arm\interpolation.cpp(194,115): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\HP\Documents\MATLAB\pegaus_inverse\Pegasus_robotic_arm\Pegasus_robotic_arm\interpolation.cpp(207,93): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\HP\Documents\MATLAB\pegaus_inverse\Pegasus_robotic_arm\Pegasus_robotic_arm\interpolation.cpp(207,121): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\HP\Documents\MATLAB\pegaus_inverse\Pegasus_robotic_arm\Pegasus_robotic_arm\interpolation.cpp(207,149): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\HP\Documents\MATLAB\pegaus_inverse\Pegasus_robotic_arm\Pegasus_robotic_arm\interpolation.cpp(207,177): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-  main.cpp
-  pegasus.cpp
-  Generating Code...
+﻿  main.cpp
   Pegasus_robotic_arm.vcxproj -> C:\Users\HP\Documents\MATLAB\pegaus_inverse\Pegasus_robotic_arm\x64\Debug\Pegasus_robotic_arm.exe
